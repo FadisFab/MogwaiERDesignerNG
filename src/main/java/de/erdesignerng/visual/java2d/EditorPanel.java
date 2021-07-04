@@ -43,6 +43,9 @@ import java.util.List;
 
 public class EditorPanel extends JPanel {
 
+    //modifikasi
+    public static final Color warna = new Color(242, 197, 153);
+
     private static final ResourceHelper HELPER = ResourceHelper.getResourceHelper(ERDesignerBundle.BUNDLE_NAME);
 
     private final String helpHTML;
@@ -117,7 +120,8 @@ public class EditorPanel extends JPanel {
         theHelpHtml.append("</html>");
         helpHTML = theHelpHtml.toString();
 
-        setBackground(Color.black);
+        //modifikasi
+        setBackground(warna);
         resourceHelper = ResourceHelper.getResourceHelper(ERDesignerBundle.BUNDLE_NAME);
         fadingHelper = new FadeInFadeOutHelper() {
             @Override
@@ -207,9 +211,10 @@ public class EditorPanel extends JPanel {
         setDoubleBuffered(true);
     }
 
+    //modifikasi
     @Override
     public void setBackground(Color bg) {
-        super.setBackground(Color.black);
+        super.setBackground(warna);
     }
 
     protected JComponent getHighlightComponentFor(EditorComponent aComponent) {
